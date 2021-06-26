@@ -1,0 +1,26 @@
+{
+  "name": "timologisi-online-typescript-connector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "git push --follow-tags",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weshipgr/timologisi-online-typescript-connector.git"
+  },
+  "keywords": [],
+  "author": "Stratos Giouldasis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weshipgr/timologisi-online-typescript-connector/issues"
+  },
+  "homepage": "https://github.com/weshipgr/timologisi-online-typescript-connector#readme",
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  }
+}
