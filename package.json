@@ -15,6 +15,13 @@
   },
   "keywords": [],
   "author": "Stratos Giouldasis",
+  "contributors": [
+    {
+      "name": "Stratos Giouldasis",
+      "url": "https://github.com/gousta",
+      "author": true
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/weshipgr/timologisi-online-typescript-connector/issues"
