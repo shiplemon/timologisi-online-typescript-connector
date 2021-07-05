@@ -1,6 +1,6 @@
 {
   "name": "timologisi-online-typescript-connector",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Typescript connector for https://timologisi.online to generate Invoices and Receipts directly with AADE",
   "main": "lib/index.js",
   "types": "lib",
