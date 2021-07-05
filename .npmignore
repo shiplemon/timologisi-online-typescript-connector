@@ -1,1 +1,7 @@
 src
+coverage
+.nyc_output
+.editorconfig
+.prettierrc
+.mocharc.js
+package.json
