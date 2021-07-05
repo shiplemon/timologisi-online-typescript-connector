@@ -25,7 +25,7 @@ export interface InvoiceRequest {
     totalGrossValue: string;
   };
   invoiceDetails: {
-    lineNumber: string;
+    lineNumber?: string;
     lineCode: string;
     measurementUnitLabel?: string;
     lineUnitPrice: string;
