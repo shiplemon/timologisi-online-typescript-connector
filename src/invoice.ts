@@ -22,8 +22,6 @@ export default function invoiceToXml(req: InvoiceRequest, opts: InvoiceOptions) 
   const issueDate = new Date().toISOString().split('T')[0];
   const uniqueID = makeUniqueId();
 
-  console.log('uniqueID', uniqueID);
-
   const totalNetValue = req.invoiceDetails.reduce((a, c) => a + Number(c.netValue), 0).toFixed(2);
   const totalVatAmount = req.invoiceDetails.reduce((a, c) => a + Number(c.vatAmount), 0).toFixed(2);
   const totalWithheldAmount = 0;
