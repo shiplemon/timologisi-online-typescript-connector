@@ -17,14 +17,14 @@ export default function invoiceToXml(req: InvoiceRequest, opts: InvoiceOptions) 
   const issueDate = new Date().toISOString().split('T')[0];
   const uniqueID = new Date().toISOString().replace(/\D+/g, '');
 
-  const totalNetValue = req.invoiceDetails.reduce((a, c) => a + Number(c.netValue), 0);
-  const totalVatAmount = req.invoiceDetails.reduce((a, c) => a + Number(c.vatAmount), 0);
+  const totalNetValue = req.invoiceDetails.reduce((a, c) => a + Number(c.netValue), 0).toFixed(2);
+  const totalVatAmount = req.invoiceDetails.reduce((a, c) => a + Number(c.vatAmount), 0).toFixed(2);
   const totalWithheldAmount = 0;
   const totalFeesAmount = 0;
   const totalStampDutyAmount = 0;
   const totalOtherTaxesAmount = 0;
   const totalDeductionsAmount = req.invoiceDetails.reduce((a, c) => a + Number(c.deductionsAmount), 0);
-  const totalGrossValue = totalNetValue + totalVatAmount;
+  const totalGrossValue = (Number(totalNetValue) + Number(totalVatAmount)).toFixed(2);
 
   const xml = parser.parse({
     InvoicesDoc: {
