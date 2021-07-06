@@ -7,6 +7,8 @@
   "scripts": {
     "postversion": "git push --follow-tags",
     "build": "tsc -p .",
+    "prepublish": "npm run build",
+    "postpublish": "rimraf lib/",
     "precompile": "rimraf src/**/*.js test/**/*.js",
     "compile": "tsc",
     "pretest": "rimraf src/**/*.js test/**/*.js",
