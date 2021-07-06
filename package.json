@@ -34,7 +34,8 @@
   "homepage": "https://github.com/weshipgr/timologisi-online-typescript-connector#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "fast-xml-parser": "^3.19.0"
+    "fast-xml-parser": "^3.19.0",
+    "moment": "^2.29.1"
   },
   "devDependencies": {
     "@types/chai": "^4.2.19",

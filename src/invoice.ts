@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { j2xParser } from 'fast-xml-parser';
 import { InvoiceOptions, InvoiceRequest } from './interface';
 
@@ -13,9 +14,15 @@ const parser = new j2xParser({
   supressEmptyNode: true,
 });
 
+const makeUniqueId = () => {
+  return `${moment().format('YYMMDDHHmmssSSS')}`;
+};
+
 export default function invoiceToXml(req: InvoiceRequest, opts: InvoiceOptions) {
   const issueDate = new Date().toISOString().split('T')[0];
-  const uniqueID = new Date().toISOString().replace(/\D+/g, '');
+  const uniqueID = makeUniqueId();
+
+  console.log('uniqueID', uniqueID);
 
   const totalNetValue = req.invoiceDetails.reduce((a, c) => a + Number(c.netValue), 0).toFixed(2);
   const totalVatAmount = req.invoiceDetails.reduce((a, c) => a + Number(c.vatAmount), 0).toFixed(2);
