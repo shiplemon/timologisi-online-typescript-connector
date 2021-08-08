@@ -115,6 +115,7 @@ export default function invoiceToXml(req: InvoiceRequest, opts: InvoiceOptions) 
             CounterpartEmail: req.API_InvoiceDetails?.API_Counterpart?.CounterpartEmail || ' ',
           },
           API_Additionals: {
+            ...req.API_InvoiceDetails?.API_Additionals,
             DocumentLabel: req.API_InvoiceDetails?.API_Additionals?.DocumentLabel || 'Απόδειξη Παροχής Υπηρεσιών',
             DocumentComments: req.API_InvoiceDetails?.API_Additionals?.DocumentComments || ' ',
             paymentMethodInvoiceLabel: req.API_InvoiceDetails?.API_Additionals?.paymentMethodInvoiceLabel || 'ΚΑΡΤΑ',
