@@ -64,6 +64,7 @@ export interface API_Additionals {
   DocumentLabel?: string;
   DocumentComments?: string;
   paymentMethodInvoiceLabel?: string;
+  Logo_ID?: string;
 }
 
 export interface API_InvoiceDetails {
